@@ -1,0 +1,48 @@
+#works {
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.worksTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.worksDesc {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.worksImgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 0; /* Ensure there's no padding that might affect the inner content width */
+}
+
+.worksImg {
+    object-fit: cover;
+    width: 30%; /* Adjust the width as per your layout for desktop */
+    margin: 0.5rem; /* Keep consistent margin */
+    aspect-ratio: 1 / 1; /* Ensures the image stays square */
+}
+
+
+@media (max-width: 600px) {
+    .worksImg {
+        width: 100%; /* Makes each image full width to ensure stacking */
+        margin: 0.5rem 0; /* Adjust margin for top & bottom only, removing left & right */
+        aspect-ratio: 1 / 1; /* Maintains square shape */
+    }
+}
