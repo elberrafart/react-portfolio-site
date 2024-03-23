@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
-    padding: 0; /* Ensure there's no padding that might affect the inner content width */
+    padding: 0; 
 }
 
 .worksImg {
@@ -36,13 +36,14 @@
     width: 30%; /* Adjust the width as per your layout for desktop */
     margin: 0.5rem; /* Keep consistent margin */
     aspect-ratio: 1 / 1; /* Ensures the image stays square */
+    border-radius: 5px;
 }
 
 
-@media (max-width: 600px) {
+@media screen and (max-width:585px) {
     .worksImg {
-        width: 100%; /* Makes each image full width to ensure stacking */
-        margin: 0.5rem 0; /* Adjust margin for top & bottom only, removing left & right */
-        aspect-ratio: 1 / 1; /* Maintains square shape */
+        width: 100%;   
+        margin: 0.5rem 0;  
+        aspect-ratio: 1 / 1;
     }
 }
