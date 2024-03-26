@@ -28,22 +28,38 @@
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
-    padding: 0; 
+    padding: 0;
+    flex-direction: row; /* Default to row layout */
+}
+
+.worksImgs a {
+    display: flex; /* Change to flex to accommodate below adjustments */
+    flex: 1 1 auto; /* Adjust this to manage space distribution */
+    align-items: center;
+    justify-content: center;
 }
 
 .worksImg {
     object-fit: cover;
-    width: 30%; /* Adjust the width as per your layout for desktop */
-    margin: 0.5rem; /* Keep consistent margin */
-    aspect-ratio: 1 / 1; /* Ensures the image stays square */
+    width: 100%; /* Adjust based on your design requirements */
+    max-width: 300px; /* Adjust the max width as per your layout */
+    margin: 0.5rem;
+    aspect-ratio: 1 / 1;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
+.worksImgs a:hover .worksImg {
+    transform: scale(1.05);
+}
 
-@media screen and (max-width:585px) {
+@media screen and (max-width: 768px) {
+    .worksImgs {
+        flex-direction: column; /* Stack images in a column on smaller screens */
+    }
+
     .worksImg {
-        width: 100%;   
-        margin: 0.5rem 0;  
-        aspect-ratio: 1 / 1;
+        width: 90%; /* Adjust to use more of the screen width on smaller devices */
+        max-width: none; /* Remove max-width restriction */
     }
 }

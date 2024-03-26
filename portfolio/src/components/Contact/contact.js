@@ -7,7 +7,7 @@ import Instagram from '../../assets/instagramlogo.png'
 
 const Contact = () => {
     return (
-        <section>
+        <section id='contact'>
             <h2 className='contactMe'>Contact Me</h2>
             <form id="contactForm">
                 <input type="text" id="name" name="name" placeholder="Your name" required />

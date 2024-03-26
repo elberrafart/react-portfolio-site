@@ -47,3 +47,13 @@
     width: 1rem;
     margin: 1rem;
 }
+
+.desktopMenuBtn:hover {
+    background-color: black; /* Inverted background color */
+    color: white; /* Inverted text color */
+    border: 2px solid white;
+}
+
+.desktopMenuBtn:hover .desktopMenuImg {
+    filter: invert(100%); /* Inverts the colors of the icon */
+}
