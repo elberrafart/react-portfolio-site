@@ -1,0 +1,96 @@
+/* contact.css */
+section {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the section */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contactMe {
+    text-align: center;
+}
+
+
+form#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 8px;
+    margin-bottom: 10px; /* Space below each input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners for a modern look */
+    background: rgb(40, 40, 40); /* Assuming a dark background */
+    color: white; /* Makes text color white */
+}
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff; /* Bootstrap primary blue, for example */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* A darker shade of blue for hover effect */
+}
+
+.links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    gap: 10px; /* Adds space between each link/image */
+    padding: 20px 0; /* Adds space above and below the links section */
+}
+
+.links img { /* Assuming .linksImg is meant to be applied to img elements within .links */
+    border: solid 2px white;
+    border-radius: 50%;
+    height: 4rem; /* Fixed height; width will auto-adjust for aspect ratio */
+    width: auto; /* Ensures the width adjusts based on the aspect ratio */
+}
+
+.links a {
+    display: inline-block; /* Treat the link as an inline block for applying padding & margins */
+    border-radius: 50%; /* Ensure the hover effect follows the circular shape */
+    overflow: hidden; /* Ensures the border-radius applies to the image as well */
+}
+
+.links img {
+    border: solid 2px white;
+    border-radius: 50%;
+    height: 4rem; /* Fixed height; width will auto-adjust for aspect ratio */
+    width: auto; /* Ensures the width adjusts based on the aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.links a:hover img {
+    transform: scale(1.1); /* Slightly increase the size of the image */
+    opacity: 0.7; /* Reduce opacity to give a slight darkening effect */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .links img {
+        height: 3rem; /* Smaller height for mobile devices */
+    }
+}
+
+form#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+    align-items: center; /* Center align the form items */
+    padding-bottom: 20px; /* Extra space at the bottom */
+}
+
+button[type="submit"] {
+    margin-top: 20px; /* Adds space above the button, separating it from the images/other inputs */
+    /* Keep existing button styles here */
+}
